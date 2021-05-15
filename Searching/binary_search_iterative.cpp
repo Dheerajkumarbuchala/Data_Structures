@@ -43,4 +43,8 @@ int main(void)
     {
         cout<<"Position of the element in array : "<<k<<endl;
     }
+    else
+    {
+        cout<<"Element is not present in array"<<endl;
+    }
 }
