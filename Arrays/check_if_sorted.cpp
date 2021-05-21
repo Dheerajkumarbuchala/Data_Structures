@@ -1,5 +1,4 @@
 #include<iostream>
-
 using namespace std;
 
 bool sorted_or_not(int a[],int n)
@@ -25,5 +24,14 @@ int main(void)
     {
         cin>>a[i];
     }
-    cout<<sorted_or_not(a,n)<<endl;
+    bool k =sorted_or_not(a,n);
+
+    if(k=1)
+    {
+        cout<<"true"<<endl;
+    }
+    else
+    {
+        cout<<"false"<<endl;
+    }
 }
