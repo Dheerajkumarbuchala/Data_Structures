@@ -25,6 +25,7 @@ int main(void)
         cin>>a[i];
     }
     bool k =sorted_or_not(a,n);
+
     if(k=1)
     {
         cout<<"true"<<endl;
