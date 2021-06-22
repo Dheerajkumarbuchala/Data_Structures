@@ -7,7 +7,6 @@ using namespace std;
 void count_non_repeated_elements(int a[],int n)
 {
     unordered_set<int>s;
-    int count = 0;
     for(int i=0;i<n;i++)
     {
         s.insert(a[i]);
