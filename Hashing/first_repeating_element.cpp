@@ -17,6 +17,7 @@ void first_repeating_element(int a[],int n)
         if(m[a[i]]>1)
         {
             k = i+1;
+            break;
         }
     }
     cout<<k;
