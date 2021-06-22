@@ -1,17 +1,32 @@
 #include<iostream>
 #include<vector>
-#include<unordered_set>
+#include<unordered_map>
 
 using namespace std;
 
 void count_non_repeated_elements(int a[],int n)
 {
-    unordered_set<int>s;
+    unordered_map<int,int>u;
+    int count = 0;
     for(int i=0;i<n;i++)
     {
-        s.insert(a[i]);
+        if(u[a[i]])
+        {
+            u[a[i]] = u[a[i]] + 1;
+        }
+        else
+        {
+            u[a[i]] = 1;
+        }
     }
-    cout<<s.size();
+    for(auto x : u)
+    {
+        if(x.second==1)
+        {
+            count++;
+        }
+    }
+    cout<<count;
 }
 
 int main(void)
