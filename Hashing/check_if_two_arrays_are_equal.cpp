@@ -1,30 +1,26 @@
 #include<iostream>
 #include<vector>
-#include<unordered_set>
+#include<map>
 
 using namespace std;
 
 bool check_if_two_arrays_are_equal(int a[],int b[],int n)
 {
-    unordered_set<int>s;
+    map<int,int>m;
     for(int i=0;i<n;i++)
     {
-        s.insert(a[i]);
+        m[a[i]]++;
     }
     for(int i=0;i<n;i++)
     {
-        if(s.count(b[i])==0)
+        m[b[i]]--;
+    }
+    for(int i=0;i<n;i++)
+    {
+        if(m[a[i]]!=0)
         {
             return false;
         }
-        else
-        {
-            s.erase(b[i]);
-        }
-    }
-    if(s.size()>0)
-    {
-        return false;
     }
     return true;
 }
