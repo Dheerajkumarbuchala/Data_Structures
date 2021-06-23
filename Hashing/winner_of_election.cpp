@@ -19,6 +19,7 @@ string winner_of_election(string a[],int n)
         if(c<m[a[i]])
         {
             s = a[i] +" "+to_string(m[a[i]]);
+            c = m[a[i]];
         }
     }
     return s;
