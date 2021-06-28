@@ -1,0 +1,27 @@
+#include<iostream>
+#include<string.h>
+
+using namespace std;
+
+void naive_pattern_search(string str1,string str2)
+{
+    int n = str1.length();
+    int m = str2.length();
+    for(int i=0;i<=n-m;i++)
+    {
+        if(str2==str1.substr(i,m))
+        {
+            cout<<i<<" ";
+        }
+    }
+}
+
+int main(void)
+{
+    string str1,str2;
+    cout<<"Enter the string 1 : ";
+    getline(cin,str1);
+    cout<<"Enter the string 2 : ";
+    getline(cin,str2);
+    naive_pattern_search(str1,str2);
+}
